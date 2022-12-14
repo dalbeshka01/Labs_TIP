@@ -1,0 +1,17 @@
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: max-content;
+    background-color: #5ED2B8;
+}
+table{
+    background-color: #34D2AF;
+}
+
+.table{
+    background-color: #00A480;
+    border-collapse: collapse;
+   
+   border: 1px solid grey;
+}

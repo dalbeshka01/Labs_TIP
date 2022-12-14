@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getWeekNumber(S)
+    {
+    
+    let e = document.getElementById('year').value;
+
+    let m = document.getElementById('month').value;
+
+    let d = document.getElementById('day').value;
+    
+
+    currentdate = new Date(e, m, d);
+
+    var oneJan = new Date(currentdate.getFullYear(),0,1);
+    var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+    var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+    document.form1.rez.value = result + "-ая неделя";
+    console.log(`The week number of the current date (${currentdate}) is ${result}.`);
+    console.log(new Date());
+        }
+    </script>
+    <form name="form1">
+    <a>Выберите нужную дату:</a>
+    <select name="day" id="day">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+    <select name="month" id="month">
+        <option value="0">января</option>
+        <option value="1">февраля</option>
+        <option value="2">марта</option>
+        <option value="3">апреля</option>
+        <option value="4">мая</option>
+        <option value="5">июня</option>
+        <option value="6">июля</option>
+        <option value="7">августа</option>
+        <option value="8">сентября</option>
+        <option value="9">октября</option>
+        <option value="10">ноября</option>
+        <option value="11">декабря</option>
+    </select>
+    <select name="year" id="year">
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+    </select>
+    <br>
+    <input type="button" value="Найти номер недели в году" onclick="getWeekNumber(form1)">
+    <input type="lable" value="" name="rez">
+</form>
+    
+</body>
+</html>

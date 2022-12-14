@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="JavaScript">  
+        function check(input) {
+         var arr = [ "1", "2", "3", "4",
+        "5", "6", "7", "8", "9", "0", "/", "-", " "];
+         var ok = true;
+         for (var i = 0; i < input.length; i++) {
+         var chr = input.charAt(i);
+         var found = false;
+         for (var j = 0; j < arr.length; j++) {
+            console.log(typeof check[j]);
+         if (chr === arr[j]) 
+         {
+         found = true;
+         }
+         }
+         if (!found)
+         { 
+         ok = false;
+         }
+         }
+         return ok;
+        }
+        function test(input) {
+        if (check(input) == false)
+        {
+        alert("Input not ok.");
+        }
+        else {
+        alert("Input ok!");
+        }
+        }
+        </script>
+        <form>
+            Telephone:
+            <input type="text" name="telephone" value="">
+            <input type="button" value="Check"
+             onClick="test(this.form.telephone.value)"> 
+        </form>
+</body>
+</html>
